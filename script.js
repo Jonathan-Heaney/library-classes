@@ -33,11 +33,13 @@ function closeModal(modal) {
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
 function addBookToLibrary(event) {
@@ -119,7 +121,3 @@ function addCard(item) {
     myLibrary.splice(`${myLibrary.indexOf(item)}`, 1);
   });
 }
-
-//Test for branching
-
-//Another test
