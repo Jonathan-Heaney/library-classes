@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Crimson Text', 'Times New Roman', serif;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header {
+  height: 100px;
+  background-color: #f3f4f6;
+}
+
+.heading-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1 {
+  font-size: 4rem;
+}
+
+.main {
+  min-height: 100vh;
+  background-color: #e5e5e5;
+  box-shadow: 0 0 3px #bbb;
+}
+
+.container {
+  width: 80%;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.add-book {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-btn {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#add-btn:hover {
+  background-color: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  padding: 1.5rem;
+  background-color: #eee;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.modal form input {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+}
+
+.checkbox-ctrl {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.submit-btn {
+  background-color: rgba(165, 243, 252, 1);
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
+.submit-btn:hover {
+  background-color: rgba(165, 243, 252, 0.8);
+  cursor: pointer;
+}
+
+.card-grid {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding-bottom: 3rem;
+}
+
+.card {
+  background-color: #fff;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #bbb;
+  font-size: 1.2rem;
+}
+
+.card button {
+  align-self: stretch;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.card button:hover {
+  cursor: pointer;
+}
+
+.read {
+  background-color: rgba(134, 239, 172, 0.8);
+}
+.not-read {
+  background-color: rgba(252, 165, 165, 0.8);
+}
+
+.read:hover {
+  background-color: rgba(134, 239, 172, 1);
+}
+
+.not-read:hover {
+  background-color: rgba(252, 165, 165, 1);
+}
+
+.remove-btn {
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+.remove-btn:hover {
+  background-color: rgba(230, 230, 230, 1);
+}

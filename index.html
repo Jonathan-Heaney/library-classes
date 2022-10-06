@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header class="header">
+      <div class="container">
+        <div class="heading-container">
+          <h1>Library</h1>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="add-book">
+          <button id="add-btn">+ Add Book</button>
+        </div>
+      </div>
+      <div class="modal" id="modal">
+        <div class="modal-header">Add New Book</div>
+        <form id="new-book-form" action="#">
+          <div>
+            <label for="title"></label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Title"
+              required
+            />
+          </div>
+          <div>
+            <label for="author"></label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              placeholder="Author"
+              required
+            />
+          </div>
+          <div>
+            <label for="pages"></label>
+            <input
+              type="number"
+              name="pages"
+              id="pages"
+              placeholder="Pages"
+              required
+              min="1"
+            />
+          </div>
+          <div class="checkbox-ctrl">
+            <label for="read">Have you read it?</label>
+            <input type="checkbox" name="read" id="read" />
+          </div>
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="container">
+        <div class="card-grid"></div>
+      </div>
+    </main>
+  </body>
+</html>
